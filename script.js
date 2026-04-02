@@ -1,9 +1,11 @@
-let total = 0;
-let countOrder = 0;
+let total = parseFloat(localStorage.getItem('taxi_total')) || 0;
+let orders = parseInt(localStorage.getItem('taxi_orders')) || 0;
+UpdateDisplay();
 
 function AddToTotal(value) {
     total += value;
-    countOrder++;
+    orders++;
+    SaveData();
     UpdateDisplay();
 }
 
@@ -13,19 +15,26 @@ function AddCustomValue() {
 
     if (!isNaN(val)) {
         total += val;
-        countOrder++;
+        orders++;
+        SaveData();
         UpdateDisplay();
         input.value = '';
     }
 }
 
-function UpdateDisplay() {
-    document.getElementById('totalDisplay').innerText = total;
-    document.getElementById('totalOrderDisplay').innerText = countOrder;
+function SaveData() {
+    localStorage.setItem('taxi_total', total);
+    localStorage.setItem('taxi_orders', orders);
 }
 
-function ResetTotal(){
+function UpdateDisplay() {
+    document.getElementById('totalDisplay').innerText = total;
+    document.getElementById('totalOrderDisplay').innerText = orders;
+}
+
+function ResetTotal() {
     total = 0;
-    countOrder = 0;
+    orders = 0;
+    SaveData();
     UpdateDisplay();
 }

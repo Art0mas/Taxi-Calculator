@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, 
+                maximum-scale=1.0, user-scalable=no" >
     <title>Taxi Calculator</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
@@ -23,12 +24,12 @@
             <button type="button" onclick="AddToTotal(250)">250</button>
             <button type="button" onclick="AddToTotal(300)">300</button>
         </div>
-        <hr>
+        
         <div class="custom_number">
-            <input type="number" id="customValue" placeholder="Своє число">
+            <input type="number" inputmode="decimal" id="customValue" placeholder="Своє число">
             <button type="button" onclick="AddCustomValue()">Додати</button>
         </div>
-        <hr>
+        
         <h2>Сума: <span id="totalDisplay">0</span></h2>
         <h2>Замовлень: <span id="totalOrderDisplay">0</span></h2>
         <button onclick="ResetTotal()" style="background-color: #555;">Скинути</button>

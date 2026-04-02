@@ -1,4 +1,14 @@
+body {
+    background-color: rgb(248, 212, 150);
+}
+
 @media(max-width: 730px) {
+    .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
     .basic_number {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -13,7 +23,7 @@
         background-color: brown;
         color: antiquewhite;
         padding: 5px;
-        touch-action: manipulation; 
+        touch-action: manipulation;
         font-size: 20px;
 
     }
