@@ -14,6 +14,12 @@
 <body>
     <div class="content">
         <div class="top-section">
+            <h2>Сума: <span id="totalDisplay">0</span></h2>
+            <h2>Замовлень: <span id="totalOrderDisplay">0</span></h2>
+            <button class="reset-button" onclick="ResetTotal()" style="background-color: #555;">
+                Скинути</button>
+        </div>
+        <div class="bottom-section">
             <div class="basic-number">
                 <button type="button" onclick="AddToTotal(100)">100</button>
                 <button type="button" onclick="AddToTotal(120)">120</button>
@@ -31,17 +37,8 @@
                 <button type="button" class="add-button" onclick="AddCustomValue()">Додати</button>
             </div>
         </div>
-        
-        <div class="bottom-section">
-            <h2>Сума: <span id="totalDisplay">0</span></h2>
-            <h2>Замовлень: <span id="totalOrderDisplay">0</span></h2>
-            <button class="reset-button" onclick="ResetTotal()" style="background-color: #555;">
-                Скинути</button>
-        </div>
 
     </div>
-
-
 </body>
 
 </html>
