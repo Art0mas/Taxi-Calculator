@@ -1,0 +1,41 @@
+@media(max-width: 730px) {
+    .basic_number {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-bottom: 20px;
+        gap: 15px;
+    }
+
+    button {
+        width: 150px;
+        height: 75px;
+        background-color: brown;
+        color: antiquewhite;
+        padding: 5px;
+        touch-action: manipulation; 
+        font-size: 20px;
+
+    }
+
+    button:hover {
+        background-color: rgb(129, 33, 33);
+    }
+
+    .custom_number {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin: 20px 0;
+        padding: 5px;
+        text-align: right;
+    }
+
+    input {
+        padding: 10px;
+        margin-right: 10px;
+        font-size: 16px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+}
