@@ -111,4 +111,6 @@ body {
 .reset-last-button:active {
     filter: brightness(0.8);
     transform: scale(0.99);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
